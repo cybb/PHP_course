@@ -1,0 +1,22 @@
+ 
+.circle {
+	display: inline-block; 
+	height: 40px;
+	width: 40px; 
+	border-radius: 50%;	 
+	border: 2px solid #000;
+	line-height: 40px;
+	text-align: center; 
+	margin: 5px;
+	background-color: #fff;
+	font-size: 20px;
+	font-weight: 800;
+}
+
+.row{
+	text-align: center;
+	padding: 5px;
+	height: 50px;
+	background-color: #ccc;
+	margin: 10px;
+}
