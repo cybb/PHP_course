@@ -107,3 +107,27 @@ article .photo {
 	display: table;
 	clear: both;
 }
+tbody tr:hover{
+	background-color: #4b4b4b;
+	transition: all .5s linear;
+	color: #fff;
+	font-size: 1.1em;
+	font-weight: 700;
+	font-style: italic;
+}
+ 
+.table_adm{
+	border:1px solid #000; 
+	text-align: center;
+	margin-bottom: 50px;
+	box-sizing: border-box;
+}
+.table_adm td{
+	border:1px solid #000;
+	padding:10px; 
+}
+.table_adm thead{
+	background-color: #9cbaf2;	 
+	font-weight: 800;
+	font-size: 1.2em;
+}
