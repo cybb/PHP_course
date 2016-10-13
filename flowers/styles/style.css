@@ -114,6 +114,8 @@ tbody tr:hover{
 	font-size: 1.1em;
 	font-weight: 700;
 	font-style: italic;
+	box-sizing: border-box;
+	height: 100%;
 }
  
 .table_adm{
@@ -121,6 +123,7 @@ tbody tr:hover{
 	text-align: center;
 	margin-bottom: 50px;
 	box-sizing: border-box;
+	 
 }
 .table_adm td{
 	border:1px solid #000;
@@ -130,4 +133,26 @@ tbody tr:hover{
 	background-color: #9cbaf2;	 
 	font-weight: 800;
 	font-size: 1.2em;
+}
+
+.sort{
+	list-style: none;
+	text-align: center;
+	margin: 15px 0;
+}
+.sort a{
+	display: block;
+	padding: 5px;
+	color: #fff;
+	font-size: 1.3em;
+}
+
+.sort li{
+	display:inline-block; 
+	border-radius: 5px;
+	background-color: #808df4;
+	margin: 5px 10px;
+	padding: 10px;
+	color: #fff;
+	padding: 10px; 
 }
