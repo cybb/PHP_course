@@ -1,6 +1,7 @@
 ﻿  <?php include "header.php";?>
   <?php include "content.php";
-	$sort = $_GET['sort'];?>
+        include "functions.php";
+         $sort = $_GET['sort'];?>
 
     
 			
@@ -62,47 +63,15 @@
 			
 			
 	<?php 
-		 $query_table_art = mysql_query( 'SELECT 	
-		 																	articles.article_name, 								categories.category_name	
-																		FROM 
-																			articles ,categories	
-																		WHERE						
-																			articles.id_category = categories.id', $db);
+		 $query_table_art = cons("","");
 		 
 		 
 		 
 		 
 		 switch($sort){
-			 case 1 : $query_table_art=mysql_query( 'SELECT
-																								articles.article_name,
-																								categories.category_name
-																							FROM
-																								articles ,
-																								categories
-																							WHERE
-																								articles.id_category = categories.id
-																							ORDER BY
-																								articles.id ASC', $db);break;
-			 case 2 : $query_table_art=mysql_query( 'SELECT
-																								articles.article_name,
-																								categories.category_name
-																							FROM
-																								articles ,
-																								categories
-																							WHERE
-																								articles.id_category = categories.id
-																							ORDER BY
-																								categories.category_name ASC', $db);break;
-			 case 3 : $query_table_art=mysql_query( 'SELECT
-																								articles.article_name,
-																								categories.category_name
-																							FROM
-																								articles ,
-																								categories
-																							WHERE
-																								articles.id_category = categories.id
-																							ORDER BY
-																								articles.article_name DESC', $db);break;
+			 case 1 : $query_table_art = cons ("articles.id", "ASC");             break;
+			 case 2 : $query_table_art = cons ("categories.category_name", "ASC");break;
+			 case 3 : $query_table_art = cons ("articles.article_name", "DESC");  break;
 		 }
 		 
 		$num =1;								

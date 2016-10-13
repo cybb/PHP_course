@@ -19,7 +19,7 @@
 			
 	<?php
 		 $query_table_cat = mysql_query('SELECT
-																			categories.category_name
+																			*
 																			FROM
 																			categories
 																			', $db);
@@ -30,7 +30,7 @@
 								<tr>
 									<td>" . $num . "</td>
 									<td>". $array_table2[category_name] . "</td>
-									<td><a href='#'>править</a></td>
+									<td><a href='category_edit.php?cat_id=" . $array_table2[id] . "'>править</a></td>
 									<td><a href='#'>удалить</a></td>
 								</tr>
 							</tbody>"; 

@@ -156,3 +156,43 @@ tbody tr:hover{
 	color: #fff;
 	padding: 10px; 
 }
+.form_adm label,
+.form_adm input,
+.form_adm textarea{
+	display: block;
+	width: 100%;
+	margin: 10px 0;
+	color: #000;
+	text-align: center;
+	border-radius: 10px; 
+}
+.control input{
+	width: 49%;
+	display: inline-block;
+	padding: 10px;
+	background-color: rgba(150, 209, 113, 0.76); 
+	font-weight: 700;
+	color: #fff; 
+}
+.control [type="submit"]{
+	background-color: #0086e8;
+	float: left;
+}.control [type="reset"]{
+	background-color: #fc1150;
+	float: right;	
+}
+.form_adm label{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	border: 1px solid #ccc;
+	padding: 5px;
+	background-color: #57a509;
+	color: #fff;
+	font-weight: 700;
+	border-radius: 10px;
+}
+[type="text"]{
+	font-size: 1.5em;
+	padding: 5px;
+}
