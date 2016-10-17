@@ -31,11 +31,13 @@
 									<td>" . $num . "</td>
 									<td>". $array_table2[category_name] . "</td>
 									<td><a href='category_edit.php?cat_id=" . $array_table2[id] . "'>править</a></td>
-									<td><a href='#'>удалить</a></td>
+									<td><a href='delete.php?id_zapisi=". $array_table2[id] ."'>удалить</a></td>
 								</tr>
 							</tbody>"; 
 		  $num++;
 		} 
+		 
+		 echo "<a href='new.php'>Новая категория</a>"
 	?>		 
 		 
 		 

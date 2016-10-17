@@ -14,7 +14,7 @@ $query_form = mysql_query("SELECT
 
 $array_form = mysql_fetch_array($query_form);
 
-echo "<form action='' name='myform' class='form_adm'>
+echo "<form action='update.php' name='myform' class='form_adm'>
 				<label for='name_cat'>Название категории
 					<input type='text' name='cat_name' id='name_cat' value='".$array_form[category_name]. "'>
 				</label>
@@ -31,23 +31,5 @@ echo "<form action='' name='myform' class='form_adm'>
 
 ?>
 
-<?php 
-
-
-$update = "UPDATE categories 
-					SET category_name = $_GET[cat_name],  
-							category_description = $_GET[cat_desc]
-					WHERE id = $catch " ;
-
-$update_query = mysql_query($update, $db);
-
-
-
-
-
-
-
-
-?>
 
  
