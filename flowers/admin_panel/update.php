@@ -3,12 +3,31 @@
 include "../config.php"; // подключае конфиг с ID подключением
  
  
-$title_cat = $_GET[cat_name]; //отлавливаем из формы данные из поля name="cat_name"
-$desc_cat = $_GET[cat_desc]; //отлавливаем из формы данные из поля name="cat_desc"
+$title_cat = $_POST[cat_name]; //отлавливаем из формы данные из поля name="cat_name"
+$desc_cat = $_POST[cat_desc]; //отлавливаем из формы данные из поля name="cat_desc"
+
+//----------------     ЗАГРУЗКА ФАЙЛА    -----------------------
+	$file_name = $_FILES[loads][name]; // ОТОБРАЛИ ИМЯ ФАЙЛА	
+	$file_type = $_FILES[loads][type]; // ОТОБРАЛИ ТИП ФАЙЛА
+	$url = '../images/';               // ОТОБРАЛИ АДРЕС ПАПКИ  
+	
+
+	move_uploaded_file( $_FILES[loads][tmp_name] , $url.$file_name );
+  // С ПОМОЩЬЮ ФУНКЦИИ ПЕРЕМЕСТИЛИ ЗАГРУЖЕННЫЙ ФАЙЛ В УКАЗАННУЮ ПАПКУ 
+
+		if ($file_type !== 'image/jpeg'){ // ПРОВЕРКА НА ЗАГРУЖЕННЫЙ ТИП ФАЙЛА
+		echo 'Данный тип файла загружать нельзя';
+		exit;
+	} 
+
+
+
+	
+// ---------------------      ВСТАВКА В ТАБЛИЦУ БАЗЫ ДАННЫХ    -------------------------------------
 
 $ins_query = "INSERT INTO 
 												`categories` (`id`, `category_name`, `category_description`, `category_image`)
-							VALUES (NULL, '$title_cat', '$desc_cat', NULL)";
+							VALUES (NULL, '$title_cat', '$desc_cat', '$file_name')";
 
 
 // создаем переменную в которую помещаем текст запроса sql INSERT - вставить INTO - в таблицу 'имя таблицы' , далее открываем скобки и прописываем В КАВЫЧКАХ имена ПОЛЕЙ,
@@ -30,7 +49,6 @@ if($update){
 	echo "ERROR";
 	
 }
-
 
 
 
