@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 function cons($pole, $order) {
 
 	if ($pole!="" or  $order!="") {

@@ -1,20 +1,14 @@
-﻿<?php include "header.php";?>
-<?php include "content.php";?>
+﻿  <?php include "header.php";?>
+  <?php include "content.php";?>
              
-
-              
-<?php  
-
+             
+ 	<?php  
 	$count_category = mysql_query('SELECT
-										             Count(categories.id) 
-								                AS  
-																  colichestvo
-									              FROM
-									                categories', $db);
-
+										Count(categories.id) 
+								   AS  colichestvo
+									FROM
+									categories',$db);
 	$array_count_categories = mysql_fetch_array($count_category); 
-
-
 	echo "Количество записей в таблице Категории -- " . $array_count_categories[colichestvo] . "<br>". "<br>";
 	
 	$count_articles = mysql_query('SELECT
@@ -23,12 +17,9 @@
 										FROM
 										articles
 										',$db);
-
 	$array_count_articles = mysql_fetch_array($count_articles); 
-
 	echo "Количество записей в таблице Статьи -- " . $array_count_articles[coli4estvo]; 
 	?> 
-
 	
 	 <table class="table_adm">
 			<thead>

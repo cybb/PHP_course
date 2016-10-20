@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 	$db = mysql_connect("localhost" , "Dima" , "!@#$%7");// идентификатор подключения
 

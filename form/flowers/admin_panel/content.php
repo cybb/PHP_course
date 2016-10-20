@@ -1,4 +1,4 @@
-﻿ 
+ 
 <div class="row content">
 <div class="left col-lg-3 col-md-3 col-sm-4 col-xs-12">
 	<ul class="menu">

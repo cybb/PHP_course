@@ -18,25 +18,26 @@
 			
 			
 	<?php
-			 
-       $query_table_cat = mysql_query('SELECT  * 	FROM  categories ', $db);
-			 
-			 
-       $num =1;								
+		 $query_table_cat = mysql_query('SELECT
+																			*
+																			FROM
+																			categories
+																			', $db);
+		$num =1;								
 		while($array_table2 = mysql_fetch_array($query_table_cat)){ 
 			
 			echo   "<tbody>
 								<tr>
 									<td>" . $num . "</td>
 									<td>". $array_table2[category_name] . "</td>
-									<td><a href='edit.php?id=1&&id_edit=" . $array_table2[id] . "'>редактировать</a></td>
-									<td><a href='delete.php?del=1&&id_zapisi=". $array_table2[id] ."'>удалить</a></td>
+									<td><a href='category_edit.php?cat_id=" . $array_table2[id] . "'>править</a></td>
+									<td><a href='delete.php?id_zapisi=". $array_table2[id] ."'>удалить</a></td>
 								</tr>
 							</tbody>"; 
 		  $num++;
 		} 
 		 
-		 echo "<a href='new.php?new=1' class='new__art'> + Новая категория</a>"
+		 echo "<a href='new.php'>Новая категория</a>"
 	?>		 
 		 
 		 
