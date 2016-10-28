@@ -7,7 +7,7 @@
 									 
 									 foreach($navigation as $value){ 
 										 
-										 echo '<li><a href="?view=category&id =' .$value[id].'">' . $value[name_category] . '</a></li>'; 
+										 echo '<li><a href="?view=category&id=' .$value[id].'">' . $value[name_category] . '</a></li>'; 
 										 
 									 } 
 									 
