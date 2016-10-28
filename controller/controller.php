@@ -3,7 +3,7 @@
 defined ('ACCESS') or die ('Попыка обратиться к файлу напрямую !'); // проверка ЗАКЛАДКИ
 
 require_once (MODEL);
-
+include_once 'function.php';
 
 
 
