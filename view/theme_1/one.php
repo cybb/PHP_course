@@ -9,8 +9,8 @@ foreach($content as $value){ ?>
                   <div class="photo">
                       <img src="<?= VIEW .'images/' . $value[thumbnails];  ?>" alt="">
                       <div class="date">
-                          <span class="day">15</span>
-                          <span class="mon">авг</span>
+                          <span class="day"><?= data_formatting($value['date'],'d')  ?></span>
+                          <span class="mon"><?= data_formatting($value['date'],'m')  ?></span>
                       </div>
                   </div>
                   <div class="text">

@@ -2,18 +2,16 @@
  
  foreach($single as $value){
  
-	 
-	 
-            
-          echo    
+ 
+  echo    
               '<article>
                  
                   <div class="photo">
                       <img src="view/theme_1/images/' . $value[thumbnails] . '" alt="">
                       
                       <div class="date">
-                          <span class="day">'.$value['date'].'</span>
-                          <span class="mon">'.$value['date'].'</span>
+                          <span class="day">'. data_formatting($value['date'],'d').'</span>
+                          <span class="mon">'. data_formatting($value['date'],'m').'</span>
                       </div>
                   </div>
                   
