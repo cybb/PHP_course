@@ -1,9 +1,6 @@
 <?php
 
-foreach($content as $value){ ?>
-	 
-	 
-            
+foreach($content as $value){ ?> 
              
               <article>
                   <div class="photo">

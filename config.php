@@ -48,6 +48,35 @@ mysql_select_db(DB) or die ('Подключение к базе данных н�
 
 mysql_query(' SET NAMES "UTF8" ') or die ('Неверная кодировка');
 
+ 
+
+ 
+// -------- АДМИН ----------
+define ('ADMIN' , '../admin/');
+
+//адрес к файлу КОНТРОЛЛЕРА
+define ( 'CONTROLLER_' , ADMIN.'controller/controller.php');
+
+//адрес к файлу МОДЕЛИ
+define ('MODEL_' ,  ADMIN.'model/model.php');
+
+//адрес к папке ВИД
+define ('VIEW_' ,  ADMIN.'view/theme_1/');
+
+// путь к ГЛАВНОМУ файлу ТЕМЫ ОФОРМЛЕНИЯ
+define('LINK_INDEX_' , VIEW_ . 'index.php');
+
+// путь к ГЛАВНОМУ файлу АДМИН ПАНЕЛИ
+define('LINK_INDEX_ADMIN' ,  ADMIN.'view/theme_1/index.php');
+
+//путь к СТИЛЯМ
+define ('LINK_CSS_' ,  'admin/view/theme1/styles/style.css');
+
+// путь к БУТСТРАПУ
+define ('LINK_BOOTSTRAP_',   'admin/view/theme1/styles/bootstrap-grid-3.3.1.min.css');
+
+// путь к МЕДИА
+define ('LINK_MEDIA_' , 'admin/view/theme1/styles/media.css');
 
 
 //------------------------------------------------------//

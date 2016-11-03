@@ -1,22 +1,9 @@
-						
-           		
-           		<ul style="list-style: none; display:flex;">
-            		
-             		<li style="margin:10px;"><a href="index.php">ГЛАВНАЯ ></a></li>
-             		<li style="margin:10px;font-style:italic;">
-             					<?php  
-												$for_categories = viborka('category' , 'id' , $catch_id);
-											 		foreach($for_categories as $vall)
-													echo $vall[name_category]; 
-											?>
-								</li> 
-             </ul>
+          		
 <?php 
-foreach($for_one as $value){ ?>  
-             
-            
-              
-             
+
+echo crumbs($view , $bread);
+
+foreach($category as $value){ ?>  
              
               <article>
                  
@@ -41,9 +28,7 @@ foreach($for_one as $value){ ?>
                   	<a href="?view=single&id=<?=$value[id]?>">Читать полностью</a>
                   </div
 										
-              </article>
-            
-              
+              </article> 
                   
  <?php 
 													 } // end foreach
