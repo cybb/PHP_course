@@ -18,10 +18,14 @@ if(empty($_GET)){
 	
 	$view = $_GET['view'];
 	
-	$catch_id = $_GET['id']; 
+	$catch_id = $_GET['id'];
+	
+	$catch_type = $_GET['type'];
 	
 	$for_single = viborka('content ,
-category' , 'category.id' , 'content.id_categories');
+category' , 'category.id' , 'content.id_categories' , $catch_type);
+	
+ 
 	
 }
 

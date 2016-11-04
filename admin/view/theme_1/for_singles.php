@@ -1,5 +1,5 @@
 <?php 
-
+ 
 echo 
   '<div class="table"> 
                   <table>
@@ -17,34 +17,18 @@ echo
 				
         foreach($for_single as $value){
 					
-					$data=data_format($value['date']);
-					
-					if($value['id_status'] == 2){
-						$bg = '<tr class="cart">';
-						$icon='<i class="fa fa-times-circle" aria-hidden="true" title="В корзине"></i>';
-						
-					} 
-					
-					else if($value['id_status'] == 3){
-						$bg = '<tr class="exclamation">';
-						$icon='<i class="fa fa-exclamation-circle" aria-hidden="true" title="черновик"></i>';
-					}  
-					
-					else{
-						$bg='<tr>';
-						$icon = '<i class="fa fa-check-circle" aria-hidden="true" title="Опубликовано"></i>';
-					}
-					
-					
+					$data = data_format($value['date']);
+					$bg = content_format($value['id_status'],'class');
+				  $icon = content_format($value['id_status'],'icon');
 					echo 
-											 $bg.
-                        '<td>'.$count.'</td>  
+											  '<tr class="'.$bg.'">
+                        <td>'.$count.'</td>  
                         <td>
                             <a href="#">'.$value['title']. '</a>
                         </td>  
                         <td>'.$value['name_category'].'</td>  
                         <td>'.$data.'</td>  
-                        <td>'.$icon.'
+                        <td><i class="fa '.$icon.'" aria-hidden="true"></i>
                         </td>  
                         <td>
                             <i class="fa fa-trash" aria-hidden="true"></i>
@@ -57,6 +41,14 @@ echo
 				}              
                     
                    
-           echo       '</table></div>'
+           echo       '</table></div>';
+
+echo $for_filter;
+						 
+						 
+						 
+						 
+						 
+						 
 
 ?>
