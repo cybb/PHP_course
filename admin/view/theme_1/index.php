@@ -4,7 +4,7 @@ include_once 'header.php';// подключаем вырезанную шапк�
 include_once 'sidebar.php'; // подключаем вырезанный сайдбар
 
 
-include_once  $view .'.php'; //  
+include_once $view .'.php'; //  
         
 
 

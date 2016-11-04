@@ -11,7 +11,7 @@ include_once('function.php');
  
 if(empty($_GET)){
 	
-	$view = 'for_singles.php';
+	$view = 'for_index.php';
  
 	
 } else {

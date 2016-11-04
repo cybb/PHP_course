@@ -18,6 +18,7 @@ echo 'ГЛАВНАЯ';?>
                       <i class="fa fa-times-circle" aria-hidden="true"></i>
                   </div>
               </div>
+              
              <div class="table">
                  <article>
                   <table>
