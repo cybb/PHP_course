@@ -7,15 +7,16 @@ echo 'ГЛАВНАЯ';?>
              <div class="massage">
                   <div class="warning">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus eos molestiae adipisci, reiciendis, deleniti, unde impedit at sit nisi id earum vel. </p>
-                      <i class="fa fa-times-circle" aria-hidden="true"></i>
+                      <i class="fa fa-times-circle close" aria-hidden="true"></i>
                   </div>
+                  
                   <div class="error">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus eos molestiae adipisci, reiciendis, deleniti, unde impedit at sit nisi id earum vel. </p>
-                      <i class="fa fa-times-circle" aria-hidden="true"></i>
+                      <i class="fa fa-times-circle close" aria-hidden="true"></i>
                   </div>
                   <div class="success">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus eos molestiae adipisci, reiciendis, deleniti, unde impedit at sit nisi id earum vel. </p>
-                      <i class="fa fa-times-circle" aria-hidden="true"></i>
+                      <i class="fa fa-times-circle close" aria-hidden="true"></i>
                   </div>
               </div>
               

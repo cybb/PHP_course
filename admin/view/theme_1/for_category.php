@@ -22,7 +22,7 @@ echo
 		   '<tr >
            <td>'.$count.'</td>  
 	         <td><a href="#">'.$value['name_category'].'</a></td>
-					 <td>'. count_articles_category($count).'</td> 
+					 <td>'. $value['col'].'</td> 
 				</tr>';
 			
 					

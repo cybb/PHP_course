@@ -54,10 +54,17 @@ function viborka_category(){
 	
 	
 	$query = mysql_query('SELECT
-												category.id,
-												category.name_category
-												FROM
-												category');
+											category.id,
+											category.name_category,
+											Count(content.id_categories) AS col
+											FROM
+											content ,
+											category
+											WHERE
+											content.id_categories = category.id
+											GROUP BY
+											category.id,
+											category.name_category');
 
 	$rezult = array(); // определили НОВУЮ ПЕРЕМЕННУЮ которая будет являться МАССИВОМ
 	
@@ -71,26 +78,6 @@ function viborka_category(){
 }
 
 
-
-function count_articles_category($i){ 
-	
-	$query = mysql_query( '
-					SELECT
-						count(content.title) AS kol
-					FROM
-						content
-					WHERE
-						content.id_categories = ' . $i); 
-	
-	  $query_array= mysql_fetch_assoc($query);
-		
-	  $count = $query_array['kol'];
-	
-	  return $count;
-		
-		 
-	
-}
  
  
 ?>

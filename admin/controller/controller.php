@@ -25,9 +25,7 @@ if(empty($_GET)){
 	$for_single = viborka('content ,
 category' , 'category.id' , 'content.id_categories' , $catch_type);
 	
-	$for_category = viborka_category() ; 
-	
-	$count_art_cat = count_articles_category($i);
+	$for_category = viborka_category() ;  
 	
 }
 

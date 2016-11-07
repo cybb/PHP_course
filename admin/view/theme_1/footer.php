@@ -7,5 +7,6 @@
       </div>
       
   </div>
+ <script src="<?= VIEW_?>script.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 defined ('ACCESS') or die ('Попыка обратиться к файлу напрямую !'); // проверка ЗАКЛАДКИ
 
 // адрес фронтальной части сайта
-define ( 'PATH' , 'index.php');
+define ( 'PATH' , 'http://localhost/travel/');
 
 //адрес к файлу КОНТРОЛЛЕРА
 define ( 'CONTROLLER' , 'controller/controller.php');
