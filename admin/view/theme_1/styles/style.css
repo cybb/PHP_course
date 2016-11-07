@@ -223,17 +223,43 @@ article .photo {
 
 /*Для Административного раздела*/
 
-table {
-    display:block;
-    border-collapse: collapse;
+.table {
+  display:block;
+  border-collapse: collapse; 
+	padding: 5px;
 }
-td,th {
-    padding: 7px 5px;
-    border-bottom: 1px #c7c7c7 solid
+.table tr{
+	border-bottom: 1px solid #ccc;
 }
-.number {
+.tables{
+	width: 600px;
+	padding: 5px; 
+	margin-left: 300px;
+	 
+}
+.tables tr:nth-child(even){
+	background: #ebebeb;
+}
+.tables tr:hover{
+	background: #8e8e8e;
+	color: #fff;
+	transition: .5s;
+}
+.tables tr:hover a{
+	color: #fff;
+}
+.tables td,
+.tables th,
+.table td,
+.table th{
+    padding: 7px 10px;
+    border-bottom: 1px #c7c7c7 solid; 
+}
+
+.numbers {
     width: 50px;
 }
+ 
 .delete, .status {
     width: 30px
 }

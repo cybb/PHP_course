@@ -35,16 +35,14 @@ echo
                         </td>  
                     </tr>';
 					
-					 $count++;
-					
+					 $count++; 
 					 
 				}              
                     
                    
-           echo       '</table></div>';
+           echo  '</table></div>';
 
-echo $for_filter;
-						 
+ 
 						 
 						 
 						 

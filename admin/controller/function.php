@@ -8,18 +8,19 @@ function data_format($date_string){
 
  function content_format($value, $element){
 	 
-	 $delete = 2;
-	 $redact = 3;
 	 
-	  if ($element == 'class')
-		{
-			if($value == 2)
-			{
-						$stroka = 'cart';
+	  if ($element == 'class'){
+			
+					if($value == 2){
+						
+							$stroka = 'cart';
 			} 
-			if($value == 3){
-						$stroka = 'exclamation';
-			}  
+			
+					if($value == 3){
+						
+							$stroka = 'exclamation';
+			}
+			
 		}
 	 
 	 if ($element == 'icon') {
@@ -41,6 +42,9 @@ function data_format($date_string){
 	 return $stroka;
 	 
  }
+
+
+
 
 
 ?>
