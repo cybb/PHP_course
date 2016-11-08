@@ -9,7 +9,7 @@
                     
                     <li><a href="?view=for_singles&type=2"><i class="fa fa-trash" aria-hidden="true" title="Корзина"></i></a></li>
                     
-                    <li><a href=""><i class="fa fa-file" aria-hidden="true" title="Создать новый"></i></a></li>
+                    <li><a href="?view=edit"><i class="fa fa-file" aria-hidden="true" title="Создать новый"></i></a></li>
                     
                 </ul>
             </div>

@@ -25,9 +25,12 @@ if(empty($_GET)){
 	$for_single = viborka('content ,
 category' , 'category.id' , 'content.id_categories' , $catch_type);
 	
-	$for_category = viborka_category() ;  
+	$for_category = viborka_category() ;
+	
+	$edit = edit($catch_id); 
 	
 }
+
 
  
 

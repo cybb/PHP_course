@@ -26,9 +26,7 @@ function string_query($table, $pole , $elem , $type){
 	}
 		 
 	return $str; 
-}
- 
-
+} 
 
 // универсальная функция. АРГУМЕНТ - ИМЯ НУЖНОЙ ТАБЛИЦЫ
 function viborka($table, $pole , $elem , $type){
@@ -78,6 +76,40 @@ function viborka_category(){
 }
 
 
+function edit($id){
+	
+	$query = mysql_query('SELECT *
+														FROM
+														content
+														WHERE
+														content.id = ' .$id); 
+	$rezult = mysql_fetch_array($query) ;
+	
+	return $rezult;  
+	
+}
+
+function select($b){
+	
+	 
+	
+	switch($b){ 
+		case 1: $c= '<option value="1" selected > ОПУБЛИКОВАННЫЕ </option>
+								<option value="2"> УДАЛЕННЫЕ </option>
+								<option value="3"> ЧEРНОВИКИ </option>';break;
+			
+		case 2: $c= '<option value="1"> ОПУБЛИКОВАННЫЕ </option>
+								<option value="2" selected> УДАЛЕННЫЕ </option>
+								<option value="3"> ЧEРНОВИКИ </option>';break;
+			
+		case 3: $c= '<option value="1"> ОПУБЛИКОВАННЫЕ </option>
+								<option value="2"> УДАЛЕННЫЕ </option>
+								<option value="3" selected> ЧEРНОВИКИ </option>';break; 
+	}
+	    
+	return $c;
+	
+}
  
  
 ?>

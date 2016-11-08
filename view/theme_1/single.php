@@ -1,5 +1,7 @@
 <?php
  
+ 
+
  echo crumbs($view , $bread);
 
  foreach($single as $value){

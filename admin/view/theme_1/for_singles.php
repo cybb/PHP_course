@@ -25,7 +25,7 @@ echo
 											  '<tr class="'.$bg.'">
                         <td>'.$count.'</td>  
                         <td>
-                            <a href="#">'.$value['title']. '</a>
+                            <a href="?view=edit&id='.$value['id_categories'].'">'.$value['title']. '</a>
                         </td>  
                         <td>'.$value['name_category'].'</td>  
                         <td>'.$data.'</td>  

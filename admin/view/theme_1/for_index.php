@@ -1,7 +1,3 @@
-<?php
-
-echo 'ГЛАВНАЯ';?>
-
  
           <div class="right col-lg-9 col-md-9">
              <div class="massage">
