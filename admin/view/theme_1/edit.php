@@ -1,6 +1,6 @@
- <?php $id_status = select($edit['id_status']);?>
+ 
 
- <form name="edit" action="" class="edit">
+ <form name="edit" action="" class="edit" method="post">
   
   <div> 
 		<input name="title" type="text"  id="title" placeholder="ЗАГОЛОВОК" value="<?= $edit['title'] ?>">
@@ -16,14 +16,25 @@
 		<input name="date" class="datte" type="date"  id="" value="<?= $edit['date']?>"> 
 		
 		<select name="status" class="status"  id="">
-<!--			<?= $id_status ?>-->
+    <?= $id_status ?>
 		</select>
 		
-		<input name="image" class="load_img" type="text"  id="" placeholder="картинка" value="<?= $edit['thumbnails']?>">
+		<input name="thumbnails" class="load_img" type="text"  id="" placeholder="картинка" value="<?= $edit['thumbnails']?>">
 		
  	</div>
  	
+ 	<select name="categories">
  	
+ 	<?php foreach($select_cat as $value) {  
+ 		if($value['id'] == $edit['id']){ 
+			$selected = 'selected'; 
+		} else{ 
+			$selected=''; 
+		}?> 
+ 		<option value="<?= $value['id']?>" <?= $selected; ?>><?= $value[name_category]?></option>  
+ 	<?php } ?> 
+ 		
+ 	</select>
  	
  	
  	<div>

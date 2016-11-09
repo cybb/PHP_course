@@ -21,11 +21,13 @@ echo
 					$data = data_format($value['date']);
 					$bg = content_format($value['id_status'],'class');
 				  $icon = content_format($value['id_status'],'icon');
+					
+					
 					echo 
 											  '<tr class="'.$bg.'">
                         <td>'.$count.'</td>  
                         <td>
-                            <a href="?view=edit&id='.$value['id_categories'].'">'.$value['title']. '</a>
+                            <a href="?view=edit&id='.$value['id'].'">'.$value['title']. '</a>
                         </td>  
                         <td>'.$value['name_category'].'</td>  
                         <td>'.$data.'</td>  

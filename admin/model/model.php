@@ -24,8 +24,10 @@ function string_query($table, $pole , $elem , $type){
 	else{
 		$str='SELECT * FROM '.$table;
 	}
-		 
+	
+	echo $str;
 	return $str; 
+	
 } 
 
 // универсальная функция. АРГУМЕНТ - ИМЯ НУЖНОЙ ТАБЛИЦЫ
@@ -48,6 +50,13 @@ function viborka($table, $pole , $elem , $type){
 } // end F
 
 
+
+
+
+
+// ---------------- FOR_CATEGORIES.PHP ---------------------------
+
+// функция для вывода ВСЕХ категорий в for_cateories.php
 function viborka_category(){
 	
 	
@@ -76,18 +85,59 @@ function viborka_category(){
 }
 
 
+// ------------------ FOR_SINGLES.PHP ---------------------
+
+// функция для вывода ВСЕХ статей в for_singles.php
+function articles(){
+	
+	$query = mysql_query('SELECT
+														category.name_category,
+														content.id,
+														content.id_categories,
+														content.title,
+														content.description,
+														content.full_text,
+														content.thumbnails,
+														content.date,
+														content.id_status
+												FROM
+														category ,
+														content
+												WHERE
+														category.id = content.id_categories
+														');
+
+	$rezult = array(); // определили НОВУЮ ПЕРЕМЕННУЮ которая будет являться МАССИВОМ
+	
+	while( $rez = mysql_fetch_array($query) ){
+		
+		$rezult[] = $rez;  
+		
+	}//end while
+	
+	return $rezult;  
+	
+}
+
+
+// -------------------- EDIT.PHP -----------------------------------
+
+//функция для вывода нужных данных из таблицы КОНТЕНТ для вствки в поля редактирования
 function edit($id){
 	
 	$query = mysql_query('SELECT *
 														FROM
 														content
 														WHERE
-														content.id = ' .$id); 
+														id = ' .$id); 
+	
 	$rezult = mysql_fetch_array($query) ;
 	
 	return $rezult;  
 	
 }
+
+
 
 function select($b){
 	
@@ -110,6 +160,52 @@ function select($b){
 	return $c;
 	
 }
+
+
+
+//данные из таблицы КАТЕГОРИИ 
+function select_category(){
+	
+	$query = mysql_query('SELECT *
+											FROM 
+											category');
+
+	$rezult = array(); // определили НОВУЮ ПЕРЕМЕННУЮ которая будет являться МАССИВОМ
+	
+	while( $rez = mysql_fetch_array($query) ){
+		
+		$rezult[] = $rez;  
+		
+	}//end while
+	
+	return $rezult; 
+	
+}
  
+//-------------- функция ОБНОВЛЕНИЯ -------------
+function update($id){
+	
+$title = $_POST['title'];
+$description = $_POST['description'];
+$full_text = $_POST['full_text'];
+$date = $_POST['date'];
+$status = $POST['status'];
+$categories = $_POST['categories'];
+$thumbnails = $_POST['thumbnails'];
+	
+$query_srt = mysql_query(' UPDATE 
+														   content
+													SET  "title"  = "$title",
+															 "description"  = "$description",
+															 "full_text"  = "$full_text",
+															 "date"  = "$date",
+															 "id_status"  = "$status" ,
+															 "id_categories"  = "$categories",
+															 "thumbnails"  = "$thumbnails"
+												  WHERE id = ' . $id) or die( mysql_error() );
+	
+	
+}
+
  
 ?>
