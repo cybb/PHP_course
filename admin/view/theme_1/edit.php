@@ -1,3 +1,10 @@
+<?php  
+
+echo alert_message($_SESSION['message']);
+
+?>
+ 
+ 
  
 
  <form name="edit" action="" class="edit" method="post">

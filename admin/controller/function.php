@@ -43,7 +43,36 @@ function data_format($date_string){
 	 
  }
 
-
+function alert_message($a){
+	
+	if ($a == 'succes'){
+		
+		$class = ' 
+		<div class="right col-lg-9 col-md-9">
+  				<div class="succes" style="background:green;"> 
+      		<p>SUCCES</p>
+      		<i class="fa fa-times-circle close" aria-hidden="true"></i>
+      </div> 
+  </div>'; 
+		
+	}else if ($a == 'fail'){
+		
+		$class = 
+			'<div class="right col-lg-9 col-md-9">
+  				<div class="error" style="background:red;> 
+      		<p>FAIL</p>
+      		<i class="fa fa-times-circle close" aria-hidden="true"></i>
+      </div> 
+  </div>'; 
+		
+	}
+	
+	
+	unset($_SESSION['message']);
+	
+	return $class;
+	
+}
 
 
 

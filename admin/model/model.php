@@ -189,22 +189,37 @@ $title = $_POST['title'];
 $description = $_POST['description'];
 $full_text = $_POST['full_text'];
 $date = $_POST['date'];
-$status = $POST['status'];
+$status = $_POST['status'];
 $categories = $_POST['categories'];
 $thumbnails = $_POST['thumbnails'];
+
 	
-$query_srt = mysql_query(' UPDATE 
-														   content
-													SET  "title"  = "$title",
-															 "description"  = "$description",
-															 "full_text"  = "$full_text",
-															 "date"  = "$date",
-															 "id_status"  = "$status" ,
-															 "id_categories"  = "$categories",
-															 "thumbnails"  = "$thumbnails"
-												  WHERE id = ' . $id) or die( mysql_error() );
+	$str = 'UPDATE  `content` 
+																												 SET  
+																															`title`   = "'.$title.'",
+																															`description`   = "'.$description.'",
+																															`full_text`   = "'.$full_text. '",
+																															`thumbnails`   = "'.$thumbnails.'", 
+																														 `date`   = '.$date.',
+																															`id_status`   = '.$status.'  ,
+																															`id_categories` = '.$categories.' 
+																									   WHERE  `id`  = '.$id.' ';
+	
+ 
+$rez = mysql_query ($str) or die( mysql_error() );
+
+	if(mysql_affected_rows() > 0){
+		
+	 $_SESSION['message'] = 'succes';
+		
+	} else {
+		
+		$_SESSION['message'] = 'fail';
+		
+	}
 	
 	
+return $rez;	 
 }
 
  
