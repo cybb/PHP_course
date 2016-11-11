@@ -95,5 +95,28 @@ function alert_message($a){
 }
 
 
+// фунцкция редиректа
+
+function redirect($url){
+	
+	// усли переменная $url TRUE , то 
+	if($url){
+		
+		// переменная $redirect получает значение $url
+		$redirect = $url;
+		
+	} 
+	else if( isset($_SERVER['HTTP_REFERER']) ){
+						
+						$redirect = $_SERVER['HTTP_REFERER'];
+					
+					}
+					 
+ 
+	
+	header( 'location:' .$redirect );
+	exit;
+	
+}
 
 ?>

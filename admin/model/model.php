@@ -222,16 +222,18 @@ $rez = mysql_query ($str) or die( mysql_error() );
 //и -1 в случае если последний запрос не удался
 	if(mysql_affected_rows() >= 1){
 		
-	 $_SESSION['message'] = 'succes';
+	 $_SESSION['message'] = 'succes'; 
+		return true;
 		
 	} else {
 		
 		$_SESSION['message'] = 'fail';
+		return false;
 		
 	}
 	
 	
-return $rez;	 
+ 
 }
 
  

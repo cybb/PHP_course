@@ -1,4 +1,8 @@
- 
+<?php  
+// вывод соббщения о статусе обновления
+echo alert_message($_SESSION['message']);
+
+?> 
 <?php 
  
 echo 

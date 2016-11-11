@@ -46,8 +46,22 @@ switch ($view)
 																	$select_cat = select_category(); 
 																	$id_status = select($edit['id_status']); 
 
+																	// усли осуществляется отправка формы 
 																	if($_POST){ 
-																		$edit2=update($catch_id); 
+																		
+																		// тогда если функция update() срабатывает и возвращает TRUE
+																						if(update($catch_id)){
+																							
+																							// то функция получает на вход адрес FOR_SINGLES.PHP
+																							redirect('?view=for_singles&type=all');
+
+																						}
+																						else{
+																							// иначе функция получает на вход алрес ГЛАВНОЙ СТРАНИЦЫ
+																							redirect(false);
+																							
+																						}
+																		
 																	}
 	break;
 		
