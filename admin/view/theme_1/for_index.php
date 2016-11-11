@@ -1,5 +1,6 @@
  
           <div class="right col-lg-9 col-md-9">
+            
              <div class="massage">
                   <div class="warning">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus eos molestiae adipisci, reiciendis, deleniti, unde impedit at sit nisi id earum vel. </p>

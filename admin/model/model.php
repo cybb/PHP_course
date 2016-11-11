@@ -30,7 +30,7 @@ function string_query($table, $pole , $elem , $type){
 	
 } 
 
-// универсальная функция. АРГУМЕНТ - ИМЯ НУЖНОЙ ТАБЛИЦЫ
+// универсальная функция.  
 function viborka($table, $pole , $elem , $type){
 	
 	$str = string_query($table, $pole , $elem, $type); // вызвали функцию которая формирует запрос, где в строке запроса нет только имени таблицы, которое мы зададим АРГУМЕНТОМ этой функции
@@ -138,7 +138,7 @@ function edit($id){
 }
 
 
-
+// -- функция формирующая статус статьи -- OPTION у тега SELECT
 function select($b){
 	
 	 
@@ -163,6 +163,9 @@ function select($b){
 
 
 
+
+
+
 //данные из таблицы КАТЕГОРИИ 
 function select_category(){
 	
@@ -181,6 +184,11 @@ function select_category(){
 	return $rezult; 
 	
 }
+
+
+
+
+
  
 //-------------- функция ОБНОВЛЕНИЯ -------------
 function update($id){
@@ -195,20 +203,24 @@ $thumbnails = $_POST['thumbnails'];
 
 	
 	$str = 'UPDATE  `content` 
-																												 SET  
-																															`title`   = "'.$title.'",
-																															`description`   = "'.$description.'",
-																															`full_text`   = "'.$full_text. '",
-																															`thumbnails`   = "'.$thumbnails.'", 
-																														 `date`   = '.$date.',
-																															`id_status`   = '.$status.'  ,
-																															`id_categories` = '.$categories.' 
-																									   WHERE  `id`  = '.$id.' ';
+						 SET  
+										`title`   = "'.$title.'",
+										`description`   = "'.$description.'",
+										`full_text`   = "'.$full_text. '",
+										`thumbnails`   = "'.$thumbnails.'", 
+										`date`   = "'.$date.'",
+										`id_status`   = '.$status.'  ,
+										`id_categories` = '.$categories.' 
+						 WHERE  `id`  = '.$id.' ';
 	
  
 $rez = mysql_query ($str) or die( mysql_error() );
-
-	if(mysql_affected_rows() > 0){
+	
+// функция СЕССИИ 
+//mysql_affected_rows()  
+//Возвращает количество измененных записей в случае успеха,
+//и -1 в случае если последний запрос не удался
+	if(mysql_affected_rows() >= 1){
 		
 	 $_SESSION['message'] = 'succes';
 		

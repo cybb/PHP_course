@@ -1,22 +1,25 @@
 <?php  
-
+// вывод соббщения о статусе обновления
 echo alert_message($_SESSION['message']);
 
 ?>
  
  
  
-
+<!-- Форма для редактирования записей  -->
  <form name="edit" action="" class="edit" method="post">
+  
   
   <div> 
 		<input name="title" type="text"  id="title" placeholder="ЗАГОЛОВОК" value="<?= $edit['title'] ?>">
  	</div>
  	
+ 	
  	<div>
 		<textarea name="description" id="" cols="20" rows="5" placeholder="текст"><?= $edit['description'] ?></textarea>
 		<textarea name="full_text" id="" cols="20" rows="5" placeholder="текст"><?= $edit['full_text'] ?></textarea>
  	</div>
+ 	
  	
  	<div>
  	
@@ -30,7 +33,9 @@ echo alert_message($_SESSION['message']);
 		
  	</div>
  	
+ 	
  	<select name="categories">
+ 	
  	
  	<?php foreach($select_cat as $value) {  
  		if($value['id'] == $edit['id']){ 
@@ -47,13 +52,7 @@ echo alert_message($_SESSION['message']);
  	<div>
 		<input type="submit" name="" id="">
 		<input type="reset" name="" id="">
- 	</div>
- 	 
- 	
- 	
- 	
- 	
- 	
+ 	</div> 
  	
  </form>
         
